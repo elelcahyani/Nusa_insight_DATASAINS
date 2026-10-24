@@ -1,0 +1,47 @@
+{
+  "rows": 314,
+  "columns": [
+    "provinsi",
+    "tahun",
+    "kemiskinan",
+    "rls",
+    "garis_maret",
+    "penduduk_ribu",
+    "kepadatan"
+  ],
+  "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "missing_values": {
+    "provinsi": 0,
+    "tahun": 0,
+    "kemiskinan": 0,
+    "rls": 0,
+    "garis_maret": 0,
+    "penduduk_ribu": 0,
+    "kepadatan": 0
+  },
+  "duplicate_province_year_rows": 0,
+  "province_count_by_year": {
+    "2017": 34,
+    "2018": 34,
+    "2019": 34,
+    "2020": 34,
+    "2021": 34,
+    "2022": 34,
+    "2023": 34,
+    "2024": 38,
+    "2025": 38
+  },
+  "model_provinces": 32,
+  "model_rows": 288,
+  "note": "The dashboard dataset includes every province in the source. The ML model uses the 32 consistently observed provinces only."
+}

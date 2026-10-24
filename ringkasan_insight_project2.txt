@@ -1,0 +1,44 @@
+INSIGHT OTOMATIS PROJECT 2
+============================================================
+Cakupan analisis: 32 provinsi lengkap, 2017-2025.
+Baris data untuk analisis utama: 288.
+Pasangan fitur-target: 256.
+Jumlah pasangan train final (target 2018-2024): 224.
+Jumlah pasangan test (target 2025): 32.
+
+1. KONDISI DATA DAN TREN
+Rata-rata kemiskinan lintas provinsi berubah dari 10.38% pada 2017 menjadi 8.34% pada 2025, perubahan -2.04 poin persentase.
+Provinsi dengan rata-rata kemiskinan tertinggi selama periode adalah Nusa Tenggara Timur (20.47%), sedangkan terendah adalah Bali (4.10%).
+Nilai ini merupakan ringkasan dari cakupan 32 provinsi setelah pengecualian Papua; bukan gambaran seluruh provinsi Indonesia.
+
+2. HUBUNGAN INDIKATOR
+Di antara empat fitur, korelasi linear absolut terbesar dengan kemiskinan adalah garis_maret (r=-0.390, arah negatif).
+Korelasi Pearson menggambarkan hubungan linear; Spearman menjadi pelengkap untuk hubungan monotonik. Keduanya tidak membuktikan sebab-akibat.
+Menurut korelasi Spearman, asosiasi monotonik absolut terbesar adalah garis_maret (rho=-0.421, arah negatif).
+
+3. HASIL MODEL PADA TARGET 2025
+- Persistence Baseline (nilai tahun sebelumnya): MAE=0.645, RMSE=0.765, R2=0.953.
+- Random Forest Baseline: MAE=1.488, RMSE=2.280, R2=0.584.
+- Random Forest Tuned: MAE=1.488, RMSE=2.280, R2=0.584.
+- Linear Regression: MAE=2.336, RMSE=3.185, R2=0.189.
+Model ML dengan MAE terendah adalah Random Forest Baseline (MAE=1.488). Parameter Random Forest terpilih dari validasi berurutan: {'n_estimators': 120, 'max_depth': None, 'min_samples_leaf': 1, 'max_features': 1.0}.
+PERINGATAN INTERPRETASI: persistence baseline memiliki MAE 0.645, lebih rendah daripada model ML terbaik (1.488). Jadi model ML belum menunjukkan peningkatan akurasi dibanding acuan nilai tahun sebelumnya pada target 2025.
+Pada perbandingan per provinsi, model ML terbaik memiliki absolute error lebih kecil daripada persistence pada 7 dari 32 provinsi.
+
+4. POLA KESALAHAN
+- Aceh: aktual 12.33%, prediksi 14.23%, absolute error 1.90 poin.
+- Bengkulu: aktual 12.08%, prediksi 13.56%, absolute error 1.48 poin.
+- Gorontalo: aktual 13.24%, prediksi 14.57%, absolute error 1.33 poin.
+- Nusa Tenggara Barat: aktual 11.78%, prediksi 12.91%, absolute error 1.13 poin.
+- Jawa Tengah: aktual 9.48%, prediksi 10.47%, absolute error 0.99 poin.
+
+5. FEATURE IMPORTANCE
+- kepadatan: importance 0.433.
+- rls: importance 0.265.
+- penduduk_ribu: importance 0.183.
+- garis_maret: importance 0.119.
+Feature importance hanya menunjukkan kontribusi relatif dalam struktur model, bukan bukti bahwa fitur menyebabkan kemiskinan.
+
+6. KETERBATASAN DAN IMPLIKASI
+Data uji akhir hanya mencakup 32 provinsi pada satu tahun target (2025), sehingga hasil belum cukup untuk menyatakan kestabilan performa model pada semua periode mendatang.
+Model sebaiknya dipakai sebagai alat bantu eksplorasi, bukan satu-satunya dasar kebijakan. Pengembangan berikutnya dapat menambah periode yang sebanding, fitur yang relevan, dan evaluasi rolling-origin ketika data tahun baru tersedia.

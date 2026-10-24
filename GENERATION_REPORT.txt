@@ -1,0 +1,26 @@
+NUSA INSIGHT ARTIFACT GENERATION REPORT
+======================================
+Source dataset: C:\Users\dwcel\OneDrive\Documents\Data Sains\nusa_insight_windows_generator\data_input\dataset_bersih_2017_2025.csv
+Source metadata: C:\Users\dwcel\OneDrive\Documents\Data Sains\nusa_insight_windows_generator\data_input\metadata_eksperimen.json
+Dashboard/source rows: 314
+Model dataset rows: 288 (32 provinces)
+Next-year pairs: 256
+Train target years 2018-2023: 192 rows
+Validation target year 2024: 32 rows
+Test target year 2025: 32 rows
+Selected RF params: {'n_estimators': 300, 'min_samples_leaf': 1, 'max_features': 1.0, 'random_state': 42, 'n_jobs': -1}
+Deployment RF and LR pipelines are trained through target year 2025.
+Map GeoJSON: NOT generated; add validated provincial boundary data separately if needed.
+
+Main artifacts:
+- data/dataset_dashboard_seluruh_provinsi.csv
+- data/dataset_model_32_provinsi.csv
+- data/pasangan_fitur_t_dan_target_t1.csv
+- backend/artifacts/A_tanpa_papua/random_forest.joblib
+- backend/artifacts/A_tanpa_papua/linear_regression.joblib
+- backend/artifacts/A_tanpa_papua/model_metadata.json
+- evaluation/metrics.json and metrics.csv
+- evaluation/predictions_test_2025.csv
+- evaluation/residual_analysis_test_2025.csv
+- evaluation/feature_importance.csv
+- evaluation/permutation_importance.csv

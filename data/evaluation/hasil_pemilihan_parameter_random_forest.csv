@@ -1,0 +1,5 @@
+﻿candidate_id,params,mean_validation_MAE,mean_validation_RMSE,mean_validation_R2,jumlah_fold
+1,"{'n_estimators': 120, 'max_depth': None, 'min_samples_leaf': 1, 'max_features': 1.0}",1.3876484374999993,1.9755397874149303,0.7421633258971255,3
+2,"{'n_estimators': 120, 'max_depth': 5, 'min_samples_leaf': 1, 'max_features': 1.0}",1.7193043993332944,2.2897179137537487,0.6554466639230815,3
+3,"{'n_estimators': 120, 'max_depth': 8, 'min_samples_leaf': 2, 'max_features': 1.0}",1.4555131474928282,2.067056288192791,0.71921659915711,3
+4,"{'n_estimators': 160, 'max_depth': 5, 'min_samples_leaf': 2, 'max_features': 0.8}",1.859388737765415,2.486356162368115,0.5946184003294902,3

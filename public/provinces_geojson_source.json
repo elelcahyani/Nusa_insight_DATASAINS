@@ -1,0 +1,18 @@
+{
+  "source": "geoBoundaries.org — gbOpen — Indonesia ADM1 — CC BY 4.0",
+  "url": "https://github.com/ans-4175/peta-indonesia-geojson",
+  "license": "CC BY 4.0",
+  "feature_count": 34,
+  "property_key": "Propinsi",
+  "note": "GeoJSON ini memiliki 34 fitur (batas wilayah sebelum pemekaran Papua 2022). Tidak mencakup Papua Selatan, Papua Tengah, Papua Pegunungan, Papua Barat Daya. Choropleth hanya valid untuk tahun 2017–2023.",
+  "name_mapping": {
+    "DI. ACEH": "Aceh",
+    "DAERAH ISTIMEWA YOGYAKARTA": "DI Yogyakarta",
+    "BANGKA BELITUNG": "Kepulauan Bangka Belitung",
+    "NUSATENGGARA BARAT": "Nusa Tenggara Barat"
+  },
+  "validated_match_count": 34,
+  "choropleth_supported_years": [2017, 2018, 2019, 2020, 2021, 2022, 2023],
+  "choropleth_disabled_years": [2024, 2025],
+  "choropleth_disabled_reason": "Data 2024–2025 mencakup 38 provinsi termasuk 4 provinsi pemekaran Papua yang tidak memiliki batas wilayah dalam GeoJSON ini."
+}

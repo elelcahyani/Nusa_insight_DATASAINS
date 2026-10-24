@@ -1,0 +1,14 @@
+﻿item,value
+file_input,dataset_bersih_2017_2025(4).csv
+provinsi_dikecualikan,papua; papua barat; papua barat daya; papua pegunungan; papua selatan; papua tengah
+jumlah_provinsi_analisis,32
+jumlah_baris_analisis,288
+jumlah_pasangan,256
+tahun_target_test,2025
+tahun_target_train_final,2018-2024
+tahun_validasi_rolling,2022; 2023; 2024
+metode_validasi,expanding-window; train target < tahun validasi
+fitur,rls; garis_maret; penduduk_ribu; kepadatan
+target,kemiskinan pada tahun berikutnya
+parameter_rf_terpilih,"{'n_estimators': 120, 'max_depth': None, 'min_samples_leaf': 1, 'max_features': 1.0}"
+random_state,42

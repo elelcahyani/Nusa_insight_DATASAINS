@@ -1,0 +1,8 @@
+﻿komponen,jumlah
+Provinsi dalam eksperimen,32
+Tahun data mentah,9
+Baris data mentah lengkap,288
+Pasangan fitur-target,256
+Pasangan target 2018-2023 (training untuk skema sederhana),192
+Pasangan target 2024 (validasi),32
+Pasangan target 2025 (testing),32

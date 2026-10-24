@@ -1,0 +1,62 @@
+{
+  "headline_split": "test_2025",
+  "test_metrics": [
+    {
+      "model": "Linear Regression",
+      "split": "test_2025",
+      "n_samples": 32,
+      "MAE": 2.335664902759284,
+      "RMSE": 3.185193747137401,
+      "R2": 0.1889418457301546
+    },
+    {
+      "model": "Random Forest Baseline",
+      "split": "test_2025",
+      "n_samples": 32,
+      "MAE": 1.5809266577548617,
+      "RMSE": 2.3288311834467605,
+      "R2": 0.56643291805032
+    },
+    {
+      "model": "Random Forest Tuned",
+      "split": "test_2025",
+      "n_samples": 32,
+      "MAE": 1.4501541666666604,
+      "RMSE": 2.2363003865511617,
+      "R2": 0.6002020492286001
+    }
+  ],
+  "validation_metrics_for_model_selection": [
+    {
+      "model": "Linear Regression",
+      "split": "validation_2024",
+      "n_samples": 32,
+      "MAE": 2.657881389533647,
+      "RMSE": 3.5749461144318526,
+      "R2": 0.13045803804148193
+    },
+    {
+      "model": "Random Forest Baseline",
+      "split": "validation_2024",
+      "n_samples": 32,
+      "MAE": 1.4172120013753604,
+      "RMSE": 2.0873609203835546,
+      "R2": 0.7035532854865518
+    },
+    {
+      "model": "Random Forest Tuned (selected on validation)",
+      "split": "validation_2024",
+      "n_samples": 32,
+      "MAE": 1.3325635416666688,
+      "RMSE": 2.005039211508716,
+      "R2": 0.7264748370596192
+    }
+  ],
+  "selected_random_forest_params": {
+    "n_estimators": 300,
+    "min_samples_leaf": 1,
+    "max_features": 1.0,
+    "random_state": 42,
+    "n_jobs": -1
+  }
+}
